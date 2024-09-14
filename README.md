@@ -58,4 +58,4 @@ On targets computer, to deactivate the RAT use task manager or simular tools
 
 On targets computer, to remove the RAT just deactivate, and remove the exe or script as its only 1 file
 
-If you need help discord handle or other comunication meathod will be attached later
+If you need help discord handle or other comunication method will be attached later
