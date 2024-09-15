@@ -30,7 +30,7 @@ ___
    
    * !stop = turns of script/bot 
    
-   * !test = test if online and the receive type
+   * !test = test if online, the receive type and version
    
    * !screen = screenshot 
    
@@ -50,8 +50,18 @@ ___
    
    * !audio (file)= plays the attached audio file
    
-   * !extra = helps with development same as !test
+   * !extra = helps with development same as !test but without version indecation
 ___
+💀Slightly dangerous commands if the person using them has ill intent💀
+
+These are indecated in the bot with skull emoji's after command is called (💀history💀:)
+
+*!history = shows google chrome history
+
+*!grabip = grabs users public ip
+___
+Older versionns will not suport newer commmands
+
 To bundle to an exe use pyinstaller
 
 On targets computer, to deactivate the RAT use task manager or simular tools
