@@ -357,12 +357,15 @@ functions = [lambda chnid, name="all": rick(chnid, name=name),
 @bot.command(name='autoswap')
 async def autoswap(ctx, name: str = None, *, autov: str = "true"):
     global autovar
-    if autov.lower() in 'true':
-        if name == strid or name == "all":                 
+    if name == strid or name == "all": 
+        if autov.lower() in 'true':           
             autovar = autov.lower() == 'true'
             await ctx.send(f'Direct Auto set to {autovar}: {strid}')
-    else:
-        await ctx.send('Enter "true" or "false"')
+        elif autov.lower() in 'false':
+            autovar = autov.lower() == 'false'
+            await ctx.send(f'Direct Auto set to {autovar}: {strid}')
+        else:
+            await ctx.send('Enter "true" or "false"')
 
 @bot.command(name='autotroll')
 async def autotroll(ctx, *, name: str = None):
