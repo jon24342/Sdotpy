@@ -8,7 +8,11 @@ This program has the added bonus of not needing admin permisions(for windows, id
 
 From what I researched this should only support 1 bot conection at a time but from testing i learned it can support 3 but maybe more
 ___
-List of commands:
+Info bot collects by default:
+
+*Users/Account username (This is so the you can direct commands to ceratin users & indirectly prevents your bot from getting rate limited(kinda))
+___
+List of commands info:
 
   Define target:
   
@@ -19,6 +23,10 @@ List of commands:
   * all = send to all active bots and no prefix will be used only sending the command output string
   
   * other/blank/mistype = print 0 / does nothing 
+___
+Events
+
+* On startup = sends a message to the hosts server and notifies the user so they know its on and don't spam opening
 ___
   Commands:
   
@@ -56,9 +64,15 @@ ___
 
 These are indecated in the bot with skull emoji's after command is called (💀history💀:)
 
+These will also notify the user in a prompt
+
 *!history = shows google chrome history
 
 *!grabip = grabs users public ip
+
+*!autoswap = swaps the autotroll variable (autovar) to true or false
+
+*!autotroll = if autovar is true then it will automaticaly cycle through commands
 ___
 Older versionns will not suport newer commmands
 
