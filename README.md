@@ -13,23 +13,27 @@ ___
 
 **Changes admin permisions cause**
 
-*Slighty dangerous commands no longer notify the user opon use (but more dangerous commnands added later still will)(But also why would you run suspicious exe's as admin)
+* Slighty dangerous commands no longer notify the user opon use (but more dangerous commnands added later still will)(But also why would you run suspicious exe's as admin)
 
-*Changes the effects for certain commands (!wallpaper, ect)
+* being able to run dangerous commands
+
+* Changes the effects for certain commands (!wallpaper, ect)
 
 **Info the RAT collects by default:**
 
-*Users/Account username (This is so the you can direct commands to ceratin users & indirectly prevents your bot from getting rate limited(kinda))
+* Users/Account username (This is so the you can direct commands to ceratin users & indirectly prevents your bot from getting rate limited(kinda))
 
-*Slight changes if used in admin(nothing terrible)(no info collected by running in admin)
+* Slight changes if used in admin(nothing terrible)(no info collected by running in admin)
 
 **Info the RAT can collect:**
 
-*Public ip address
+* Public ip address
 
-*Google chrome default search history
+* Google chrome default search history
 
-*sends screenshots
+* sent screenshots
+
+* files and folder names inside the current users directory
 
 **More WILL be added**
 ___
@@ -49,7 +53,7 @@ List of commands info:
 ___
 Events
 
-* On startup = sends a message to the hosts server and notifies the user so they know its on and don't spam opening the file and know its running
+* On startup = sends a message to the hosts server and notifies the user so they know its on and don't spam open the file
 ___
   Commands:
   
@@ -63,9 +67,9 @@ ___
    
    * !test = test if online, the receive type and version
 
-   * !debug (str)= toggles sending messages back to the user for commands that don't need to send somthing back (dissabled by default)
+   * !debug (str)= toggles sending messages back to the atacker for commands that don't need to send somthing back (dissabled by default)
 
-   * !group (str)= adds the selected user to a group making it easier to send commands to 2+ people but not all(also can prevent ratelimiting)
+   * !group (str)= adds the selected user's machine to a group list making it easier to send commands to 2+ people but not all(also can prevent ratelimiting)
 
    * !listgroup = lists all the groups the user is assigned to
    
@@ -83,36 +87,61 @@ ___
    
    * !prompt (str)= sends a prompt where you have to click ok or close, clicking ok does nothing (for now)
    
-   * !wallpaper (file)(str)= changes the wallpaper of the target to the image file but is only temporary (doesn't persist after restart)
+   * !wallpaper (file)= changes the wallpaper of the target to the image file but is only temporary (doesn't persist after restart)
      /w Admin = sets the images as the permanent wallpaper until changed by user (persists after restart)
    
    * !audio (file)= plays the attached audio file (only .mp3 and supposedly .wav)
 
    * !popimg (file)= overlays all the attached images on the users screen and they can click them to make them disapear
+
+   * !browse = This command has several functions implemented as one, it has its own explaination down below
    
    * !extra = helps with development does nothing
 ___
-💀 **Slightly dangerous commands (if the person using them has ill intent)** 💀
+💀 **Slightly dangerous commands(if the person using them has ill intent)** 💀
 
 These are indecated in the bot with skull emoji's after opon the receving message command (💀history💀:)
 
 These will also notify the user in a prompt, **Unless** the user enabled with admin perms (again why)
 
-*!history = shows google chrome defaut history
+* !history = shows google chrome defaut history
 
-*!grabip = grabs users public ip
+* !grabip = grabs users public ip
 
-*!autoswap = swaps the autotroll variable (autovar) to true or false (dissabled by default)
+* !autoswap = swaps the autotroll variable (autovar) to true or false (dissabled by default)
 
-*!autotroll = if autovar is true then it will automaticaly cycle through commands (including slightly dangerous commands)
+* !autotroll = if autovar is true then it will automaticaly cycle through commands (including slightly dangerous commands)
+___
+⚠️💀**Dangerous Commands**💀⚠️
+
+These commands **Require admin** either because they can be dangerous or becasuse they need it to function
+
+* !cmd = (file)(str) either runs the attatched bat file/shellscript or the typed out command (attatched files get deleted after ran) 
+___
+**!browse**
+This command allows the atacker to look through the current user directory 
+
+Using buttons the atacker can access these directorys and can view the files inside
+
+There are 2 options currently but will add more:
+
+* Run = runs the selected file 
+
+* Send = sends the selected file to the atacker
+
+Might update the risk level later
 ___
 Note:
+
+Maximum file size the bot can send is based on nitro subscription (defualt size without nitro is 10 Mb)
+
+Remember to keep your bot token safe especily if running on a large scale don't just leave it in the script as it can be a security venerability
 
 This RAT mainly works on windows as i can't test mac or linux
 
 Older versionns will not suport newer commmands
 
-To bundle to an exe use pyinstaller(will add a guide to how to do so later)
+This application suports bundling too an exe
 
 To deactivate the RAT use task manager or simular tools
 
